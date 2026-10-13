@@ -1,3 +1,54 @@
+# =============================================================================
+# Default-deny: nothing is tracked unless it is allow-listed here.
+# The competition data, row-level artifacts, model weights, submission packages
+# and private working files must never reach this repository (see README).
+# =============================================================================
+/*
+!/.gitignore
+!/LICENSE
+!/README.md
+!/requirements*.txt
+!/pitch_control/
+!/eda/
+!/training/
+!/validation/
+!/tests/
+!/docs/
+
+# Hard deny, even inside allow-listed directories.
+data/
+outputs/
+runs/
+_artifacts/
+_orig/
+submissions/
+catboost_info/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.arrow
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+*.cbm
+*.onnx
+*.zip
+*.gz
+*.tar
+*.tgz
+*.7z
+*.b64
+*.log
+*.pid
+*.so
+
+# --- standard Python template (kept from the initial commit) -----------------
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
