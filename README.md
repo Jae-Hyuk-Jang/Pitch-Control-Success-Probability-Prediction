@@ -205,10 +205,9 @@ python -m validation.row_independence_audit --model-dir model --frame pseudo_tes
 
 ## Verification
 
-* Every module in `pitch_control/` is **AST-identical** to the corresponding file of the submitted package (SHA-256
-  `268ad8b1456c2e5b5cd4674a195d8599dc9767efa4c6ae664f0e78560a328736`) apart from relative imports and docstrings.
-  `config.py` keeps only the column groups the feature graph uses; the tail-term helpers and the `Predictor` class were
-  moved out of the submitted `script.py` verbatim (checked with the same AST comparison).
+* Every module in `pitch_control/` is **AST-identical** to the corresponding file of the submitted package apart from
+  relative imports and docstrings. `config.py` keeps only the column groups the feature graph uses; the tail-term helpers
+  and the `Predictor` class were moved out of the submitted `script.py` verbatim (checked with the same AST comparison).
 * `pytest` covers the feature graph, tail terms, reference recipes, component-aux, the audit tool and (when torch is
   installed) the neural members: 44 tests on synthetic data.
 * The code that fitted the frozen artifacts is not part of this repository, and the EDA units under `eda/phase0/` are the
